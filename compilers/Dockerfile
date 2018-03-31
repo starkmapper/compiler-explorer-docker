@@ -1,0 +1,1 @@
+FROM stark/compiler-explorer:base
