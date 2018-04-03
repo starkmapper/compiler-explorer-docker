@@ -5,5 +5,6 @@ RUN git clone --branch bcc https://github.com/starkmapper/compiler-explorer.git 
   make
 
 ADD c++.local.properties /compiler-explorer/etc/config/
+ADD run.sh /
 
-#ENTRYPOINT [ "/opt/compiler-explorer/node/bin/node", "/compiler-explorer/app.js" ]
+CMD ["/run.sh"]
