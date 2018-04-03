@@ -1,5 +1,5 @@
 #!/bin/bash
 for tag in `find * -type d`
  do 
-  docker build ./$tag --tag stark/compiler-explorer:$tag
+  docker build ./$tag --tag starkmapper/compiler-explorer:$tag
 done
