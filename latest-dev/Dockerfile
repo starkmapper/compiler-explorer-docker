@@ -1,0 +1,5 @@
+FROM starkmapper/compiler-explorer:latest
+USER root
+RUN chown -R root /home/gcc-user
+RUN apt-get update &&\
+  apt-get install -y vim
