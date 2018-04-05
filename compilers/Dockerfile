@@ -1,4 +1,4 @@
-FROM starkmapper/compiler-explorer:base as compilers-base
+FROM starkmapper/compiler-explorer:base
 # Add linux compilers
 ADD compilers.tgz /
 ADD *-bin.tar.gz *-include.tar.gz /opt/compiler-explorer/windows/
