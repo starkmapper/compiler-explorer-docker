@@ -1,0 +1,8 @@
+version: '3'
+services:
+  compiler-explorer:
+    image: starkmapper/compiler-explorer:latest-dev
+    container_name: compiler-explorer-dev
+    hostname: compiler-explorer-dev
+    ports:
+      - 10241:10240

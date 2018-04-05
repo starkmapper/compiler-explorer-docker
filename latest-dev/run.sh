@@ -17,4 +17,4 @@ done
 echo "Running trivial command to initialize wineserver context"
 echo "echo It works; exit" | /opt/wine-devel/bin/wine64 cmd
 # Hope that that's enough...
-make
+make dev
