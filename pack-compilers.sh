@@ -6,7 +6,8 @@ versions=`eval ls $base_dir`
 echo $versions
 # exclude full by default
 #archives="full bin msbuild include lib"
-archives="bin include lib"
+archives="bin include"
+#archives="bin include lib"
 #archives="msbuild"
 for version in $versions
 do
@@ -28,9 +29,15 @@ do
   for archive in $archives
   do
     files_var="$archive"_files
+    archive_file="$original_pwd/compilers/$version-$archive.tar.gz"
     eval archive_files='$'$files_var
-    echo Creating archive: $archive
-    eval tar czf '"$original_pwd/compilers/$version-$archive.tar.gz"' $archive_files
+    if [ ! -f "$archive_file" ]
+    then
+      echo Creating archive: $archive
+      eval tar czf '"$archive_file"' $archive_files
+    else
+      echo Skipping archive: $archive
+    fi
   done
 done
 cd "$original_pwd"
